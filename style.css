@@ -6,20 +6,19 @@
 }
 
 body {
-  color: #1f2937;
   background: #f8fafc;
+  color: #1f2937;
 }
 
 /* HERO */
 .hero {
-  height: 90vh;
-  background: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429")
-    center/cover no-repeat;
+  height: 95vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
   position: relative;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.6);
   height: 100%;
   color: white;
   display: flex;
@@ -33,6 +32,7 @@ body {
 .overlay h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .overlay p {
@@ -45,12 +45,13 @@ body {
 }
 
 .btn {
-  padding: 12px 22px;
+  padding: 12px 25px;
   margin: 8px;
   text-decoration: none;
   color: white;
   font-weight: 600;
   border-radius: 30px;
+  transition: 0.3s;
 }
 
 .call {
@@ -61,9 +62,13 @@ body {
   background: #16a34a;
 }
 
+.btn:hover {
+  opacity: 0.85;
+}
+
 /* SECTIONS */
 .section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
@@ -90,11 +95,16 @@ body {
   width: 280px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -110,26 +120,39 @@ body {
 /* FEATURES */
 .features {
   list-style: none;
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
 }
 
 .features li {
-  margin: 10px 0;
+  margin: 12px 0;
+  font-size: 1.1rem;
 }
 
-/* FULL IMAGE */
-.full-img {
-  width: 90%;
-  max-width: 900px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
 /* FOOTER */
 footer {
   background: #0f172a;
   color: white;
-  padding: 25px;
+  padding: 30px;
   text-align: center;
 }
